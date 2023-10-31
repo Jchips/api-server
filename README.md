@@ -10,8 +10,9 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd]()
-- [back-end server url]()
+- [GitHub Actions ci/cd](https://github.com/Jchips/api-server/actions)
+- [back-end server url](https://api-server-dev-u3w5.onrender.com)
+- [Pull Request](https://github.com/Jchips/api-server/pull/1)
 
 ### Setup
 

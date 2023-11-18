@@ -12,7 +12,7 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 
 - [GitHub Actions ci/cd](https://github.com/Jchips/api-server/actions)
 - [back-end server url](https://api-server-dev-u3w5.onrender.com)
-- [Pull Request](https://github.com/Jchips/api-server/pull/1)
+- [Pull Request](https://github.com/Jchips/api-server/pull/3)
 
 ### Setup
 
@@ -31,6 +31,10 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 - What was your key takeaway?
 
     My key takeaway is that making a collection makes it easier to make changes to the CRUD operations if something changes, so that I don't have to edit every individual route file for any minor change.
+
+- Pull request
+
+    <https://github.com/Jchips/api-server/pull/3>
 
 - GET : `/food` - Fetches all the food
 - GET : `/food/:id` - Fetches specific food

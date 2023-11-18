@@ -1,4 +1,4 @@
-# LAB - Class 03
+# LAB - Class 3 & 4
 
 ## Project: API Server
 

@@ -19,7 +19,7 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 #### `.env` requirements
 
 - PORT:enter-whatever-port-you-want
-- DATABASE_URL=postgres-local-database-url
+- DATABASE_URL=postgres-database-url
 
 #### How to initialize/run your application
 
@@ -27,6 +27,10 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 - `npm start`
 
 #### Features / Routes
+
+- What was your key takeaway?
+
+    My key takeaway is that making a collection makes it easier to make changes to the CRUD operations if something changes, so that I don't have to edit every individual route file for any minor change.
 
 - GET : `/food` - Fetches all the food
 - GET : `/food/:id` - Fetches specific food

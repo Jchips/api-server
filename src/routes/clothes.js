@@ -1,14 +1,14 @@
 'use strict';
 
 const express = require('express');
-const { clothesModel } = require('../models');
+const { clothesCollection } = require('../models');
 
 const router = express.Router();
 
 // Fetch all clothing items
 router.get('/clothes', async (req, res, next) => {
   try {
-    const allClothes = await clothesModel.findAll();
+    const allClothes = await clothesCollection.read();
     res.status(200).send(allClothes);
   } catch (err) {
     next(err);
@@ -18,11 +18,7 @@ router.get('/clothes', async (req, res, next) => {
 // Fetch specific clothing item
 router.get('/clothes/:id', async (req, res, next) => {
   try {
-    const clothingItem = await clothesModel.findAll({
-      where: {
-        id: req.params.id,
-      },
-    });
+    const clothingItem = await clothesCollection.read(req.params.id);
     res.status(200).send(clothingItem);
   } catch (err) {
     next(err);
@@ -32,7 +28,7 @@ router.get('/clothes/:id', async (req, res, next) => {
 // Add clothing item
 router.post('/clothes', async (req, res, next) => {
   try {
-    const addClothingItem = await clothesModel.create(req.body);
+    const addClothingItem = await clothesCollection.create(req.body);
     res.status(201).send(addClothingItem);
   } catch (err) {
     next(err);
@@ -42,12 +38,7 @@ router.post('/clothes', async (req, res, next) => {
 // Update clothing item
 router.put('/clothes/:id', async (req, res, next) => {
   try {
-    const updateClothingItem = await clothesModel.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
-      returning: true,
-    });
+    const updateClothingItem = await clothesCollection.update(req.body, req.params.id);
     res.status(200).send(updateClothingItem[1]);
   } catch (err) {
     next(err);
@@ -57,12 +48,8 @@ router.put('/clothes/:id', async (req, res, next) => {
 // Remove clothing item
 router.delete('/clothes/:id', async (req, res, next) => {
   try {
-    const removeClothingItem = await clothesModel.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
-    res.status(200).send(removeClothingItem);
+    let deletedRecord = await clothesCollection.delete(req.params.id);
+    res.status(200).send(deletedRecord);
   } catch (err) {
     next(err);
   }

@@ -83,7 +83,7 @@ describe('REST API', () => {
     let response = await request.delete('/food/2');
 
     expect(response.status).toEqual(200);
-    expect(response.text).toEqual('deleted food');
+    expect(response.text).toEqual('deleted record');
   });
 
   it('handles bad routes', async () => {

@@ -14,6 +14,14 @@ const clothes = (sequelizeDatabase, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    foodId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'food',
+        key: 'id',
+      },
+    },
   });
 };
 

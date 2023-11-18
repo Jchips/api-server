@@ -1,4 +1,4 @@
-# LAB - Class 03
+# LAB - Class 3 & 4
 
 ## Project: API Server
 
@@ -12,14 +12,14 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 
 - [GitHub Actions ci/cd](https://github.com/Jchips/api-server/actions)
 - [back-end server url](https://api-server-dev-u3w5.onrender.com)
-- [Pull Request](https://github.com/Jchips/api-server/pull/1)
+- [Pull Request](https://github.com/Jchips/api-server/pull/3)
 
 ### Setup
 
 #### `.env` requirements
 
 - PORT:enter-whatever-port-you-want
-- DATABASE_URL=postgres-local-database-url
+- DATABASE_URL=postgres-database-url
 
 #### How to initialize/run your application
 
@@ -27,6 +27,14 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 - `npm start`
 
 #### Features / Routes
+
+- What was your key takeaway?
+
+    My key takeaway is that making a collection makes it easier to make changes to the CRUD operations if something changes, so that I don't have to edit every individual route file for any minor change.
+
+- Pull request
+
+    <https://github.com/Jchips/api-server/pull/3>
 
 - GET : `/food` - Fetches all the food
 - GET : `/food/:id` - Fetches specific food
